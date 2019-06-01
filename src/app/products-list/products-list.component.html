@@ -1,15 +1,15 @@
 <h1>Lista produktow !!!</h1>
 
 <ul>  
-  <!-- petla -->
-  <li>
-    <a href='#'>
-      <div>
-        <h3>Nazwa</h3>
-        <img src='' />
-        <span>Cena</span>
-      </div>
-    </a>
-  </li>
+
+  <li *ngFor="let product of products | async">
+      
+          <div>
+            <a href='#'><h3>{{product.name}}</h3></a>
+            <img src={{product.imgUrl}} width=200/>
+            <span>Cena: {{product.price}}</span>
+          </div>
+        
+    </li>
 </ul>
 
